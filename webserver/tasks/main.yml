@@ -14,12 +14,12 @@
 - name: download template for nginx webserver
   get_url:
     url: https://www.free-css.com/assets/files/free-css-templates/download/page277/intot.zip
-    dest: /var/www/html/
+    dest: /usr/share/nginx/html/
 
 - name: Extracting the template for nginx
   unarchive:
     src: /var/www/html/intot.zip
-    dest: /var/www/html/
+    dest: /usr/share/nginx/html/
     remote_src: true
 
 - name: start and enable nginx
